@@ -4,17 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/style.css">
-    <title>Document</title>
+    <title>Progração Orientada a Evento</title>
+    <link rel="shortcut icon" type="imagex/png" href="./IMG/console.png">
 </head>
 <body>
     <div class="context">
         <div class="conjunto">
-            <div>
-                <h1 class="mint">PROGRAMAÇÃO ORIENTADO A EVENTOS</h1>
-                <h4>(Com Python)</h4>
+            <div class="titlePage">
+                <div>
+                    <h1 class="mint">PROGRAMAÇÃO ORIENTADO A EVENTOS</h1>
+                    <h4>(Com Python)</h4>
+                </div>
+                <div>
+                    <p class="instrução" id="typing-text"></p>
+                </div>
+                <div class="button">
+                    <a class="link" href="#apresentacao" id="clickButton"><span class='start-btn'>START</span></a>
+                </div>
+                <audio id="clickAudio" src="SOUNDS/btnClicked.mp3" preload="auto"></audio>
             </div>
-            <div class="button">
-                <a class="link" href="#apresentacao"><span class='start-btn'>START</span></a>
+            <div class="membrosArea membros-container">
+                <h3 class="membros">
+                    <span class="mint">João Pedro Amaral Rosa - 29630746</span> / Desenvolvedor front-end e Responsavel pela pesquisa sobre a programnação orientada a eventos<br>
+                    <span class="mint">Gabriel de Souza Ribeiro - xxxxxxxx</span> / Responsavel pela pesquisa sobre python<br>
+                    <span class="mint">Davi augusto dos santos - xxxxxxxx</span> / Responsavel pela pesquisa sobre python <br>
+                    <span class="mint">Vinicius de Souza - xxxxxxxx</span> / Responsavel pela pesquisa sobre a programnação orientada a eventos<br>
+                    <span class="mint">Estevan de souza ferreira - xxxxxxxx</span> / Responsavel por algo ai<br>
+                    <span class="mint">Teste membro da silva - xxxxxxxx</span> / Responsavel por algo ai
+                </h3>
             </div>
         </div>
     </div>
@@ -24,8 +41,10 @@
         <source src="SOUNDS/soundtrack.m4a" type="audio/mpeg">
     </audio>
 
-    <span class='video-game-button'><button class="btnMusic" onclick="play()" type="button"><img src="IMG/play.png"></button></span>
-    <span class='video-game-button'><button class="btnMusic" onclick="pause()" type="button"><img src="IMG/pause.png" class="pause"></button></span>
+    <div class="musicbtn">
+        <span class='video-game-button'><button class="btnMusic" onclick="play()" type="button"><img src="IMG/play.png"></button></span>
+        <span class='video-game-button'><button class="btnMusic" onclick="pause()" type="button"><img src="IMG/pause.png" class="pause"></button></span>
+    </div>
 
     <script>
         var myMusic= document.getElementById("music");
@@ -59,8 +78,23 @@
 
 <!--parte 2 do site-->
 
-<div class="apresentacao" id="apresentacao">
+    <div class="apresentacao" id="apresentacao">
+        <div class="dinossauroBK">
+            <div>
+                <h2 class="titleOE">O QUE É PROGRAMAÇÃO ORIENTADA A EVENTOS? </h2>
+            </div>
+            <div class="OrientadoAEvento"></div>
+            <div class="btnNext">
+                <a class="linkNext" href="#apresentacao" id="clickButton"><span class='start-btn'>NEXT</span></a>
+            </div>
+        </div>
+    </div>
 
-</div>
+    <div class="apresentacaoPython" id="apresentacaoPY">
+        <div class="bkBlack">
+            
+        </div>
+    </div>
+    <script src="JS/script.js"></script>
 </body>
 </html>
