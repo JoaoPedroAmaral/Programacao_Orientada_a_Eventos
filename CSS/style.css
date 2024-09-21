@@ -240,7 +240,7 @@ body{
 	border-radius: 7px;
     box-shadow: 0 .2em gray; 
     cursor: pointer;
-    font-size: 20pt;
+    font-size: 20px;
     font-family: "Press Start 2P", system-ui;
 
 }
@@ -356,7 +356,14 @@ body{
 
 .apresentacao{
     background-color: #ccc;
+    transition: background-color 4s ease;
 }
+
+.apresentacaoDark{
+    background-color: #333;
+    transition: background-color 4s ease;
+}
+
 
 .apresentacaoPython{
     background-image: url(../IMG/Programing.gif);
@@ -371,18 +378,42 @@ body{
     background-image: url(../IMG/fundoDinosauro.png);
 }
 
+.dinossauroBKDark{
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position-y:bottom;
+    background-image: url(../IMG/DaycenarychomeDark.png);
+}
+
 .titleOE{
     text-align: center;
     padding-top: 20px;
     font-weight: bold;
+    font-family: "Press Start 2P", system-ui;
+    color: black;
+    transition: color 2s ease;
+    padding-bottom: 20px;
+}
+
+.titleOEDark{
+    text-align: center;
+    padding-top: 20px;
+    font-weight: bold;
+    font-family: "Press Start 2P", system-ui;
+    color: #ccc;
+    text-shadow: 4px 4px black;
+    transition: color 2s ease;
+    padding-bottom: 20px;
 }
 
 .OrientadoAEvento{
     height: 78vh;
 }
 
-.linkNext{
+.linkNext, .linkNextDark{
     margin: 0;
+    margin-top: 5px;
     padding: 0;
     width: 100%;
     display: flex;
@@ -400,4 +431,145 @@ body{
 .bkBlack{
     background-color: rgba(0,0,0,0.5);
     height: 100vh;
+}
+
+.NextDark{
+    display: none;
+}
+
+.content{
+    display: flex;
+}
+
+.OrientadoAEvento1{
+    height: 75vh;
+    width: 50%;
+    display: flex;
+    margin-left: 10px;
+    align-items: baseline;
+    justify-content: start;
+    opacity: 1;
+    transition: opacity 1s ease;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 5px;
+    padding: 0px 10px;
+}
+
+.OrientadoAEvento2{
+    height: 78vh;
+    width: 50%;
+    margin-right: 10px;
+    display: flex;
+    align-items: baseline;
+    justify-content: end;
+    opacity: 0;
+    transition: opacity 1s ease;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 5px;
+    padding: 0px 10px;
+}
+
+.Part1{
+    margin-top: 15px;
+    text-align: center;
+    color: black;
+    font-size: 14px;
+    font-family: "Press Start 2P", system-ui;
+}
+
+.Part2{
+    margin-top: 15px;
+    
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    text-shadow: 3px 3px black;
+    font-family: "Press Start 2P", system-ui;
+
+}
+
+.text1{
+    margin-top: 10%;
+    font-size: 95%;
+    text-align: justify;
+    font-weight: bold;
+}
+
+.text2, .textArea2 li{
+    margin-top: 2%;
+    font-size: 90%;
+    text-align: justify;
+    font-weight: bold;
+    color: white;
+    text-shadow: 3px 3px black;
+}
+
+.textArea2 li{
+    margin-top: 2%;
+}
+
+/*FOOTER*/
+
+.footer{
+    height: 48vh;
+    display: flex;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.footer2{
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.IconMario{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.mario{
+    width: 130px;
+}
+
+.referencesPython, .referencesPOE{
+    width: 40%;
+    margin: 15px 0px;
+    margin-left: 15px;
+}
+
+
+.referencesPython{
+    border-right:solid white 2px ;
+}
+
+.referencesPython li, .referencesPOE li{
+    color: white;
+    margin-bottom: 10px;
+    margin-left: 15%;
+}
+
+.linkFooter{
+   color: white;
+   margin-right:15px;
+   text-align: start;
+   text-decoration: none;
+}
+
+.linkFooter:hover{
+    text-decoration:underline white;
+    font-weight: bold;
+}
+
+.titleFooter{
+    text-align: center;
+    margin: 25px 0;
+    color: white;
+    font-family: "Press Start 2P", system-ui;
+}
+
+.textFooter{
+    color: white;
 }
