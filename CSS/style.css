@@ -11,6 +11,11 @@
     base-palette: 2;
 }
 
+@font-palette-values --Mint2 {
+    font-family: Rocher;
+    base-palette: 6;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -62,6 +67,10 @@ body{
 
 .mint {
     font-palette: --Mint;
+}
+
+.mint2 {
+    font-palette: --Mint2;
 }
 
 .area{
@@ -356,12 +365,12 @@ body{
 
 .apresentacao{
     background-color: #ccc;
-    transition: background-color 4s ease;
+    transition: background-color 3s ease;
 }
 
 .apresentacaoDark{
     background-color: #333;
-    transition: background-color 4s ease;
+    transition: background-color 3s ease;
 }
 
 
@@ -413,11 +422,12 @@ body{
 
 .linkNext, .linkNextDark{
     margin: 0;
+    margin-right: 12px;
     margin-top: 5px;
     padding: 0;
     width: 100%;
     display: flex;
-    justify-content:center;
+    justify-content:end;
     align-items:end;
     outline: none;
     text-decoration: none;
@@ -473,13 +483,14 @@ body{
     margin-top: 15px;
     text-align: center;
     color: black;
-    font-size: 14px;
-    font-family: "Press Start 2P", system-ui;
+    font-size: 25px;
+    font-family: 'Rocher';
+    animation: colorChange2 1.5s infinite alternate;
 }
 
 .Part2{
     margin-top: 15px;
-    
+    animation: colorChange 1.5s infinite alternate;
     text-align: center;
     color: white;
     font-size: 14px;
@@ -489,7 +500,7 @@ body{
 }
 
 .text1{
-    margin-top: 10%;
+    margin-top: 5%;
     font-size: 95%;
     text-align: justify;
     font-weight: bold;
@@ -507,6 +518,24 @@ body{
 .textArea2 li{
     margin-top: 2%;
 }
+
+/*Programação orientada a eventos*/
+
+.bkBlack h2{
+    font-family: 'Rocher';
+    font-size: 50px;
+    padding: 12px 0;
+    text-align: center;
+    color: white;
+}
+
+.bkBlack h4{
+    font-size: 14px;
+    font-family: "Press Start 2P", system-ui;
+    text-align: center;
+    color: white;
+}
+
 
 /*FOOTER*/
 

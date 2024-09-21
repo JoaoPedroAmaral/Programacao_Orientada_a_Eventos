@@ -20,8 +20,6 @@ document.getElementById('clickButton').addEventListener('click', function() {
     const apresentacao = document.getElementById("apresentacao")
     const TitlePy = document.getElementById("TitlePy")
     const dinossauroBK = document.getElementById("BK")
-    const OrientadoAEvento1 = document.getElementById("OrientadoAEvento1")
-    const OrientadoAEvento2 = document.getElementById("OrientadoAEvento2")
     if(apresentacao.classList == "apresentacaoDark"){
         apresentacao.classList.toggle("apresentacaoDark");
         apresentacao.classList.toggle("apresentacao")

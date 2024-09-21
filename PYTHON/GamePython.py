@@ -83,7 +83,6 @@ def draw_gradient():
         b = 255  # Azul fixo
         pygame.draw.line(screen, (r, g, b), (0, i), (SCREEN_WIDTH, i))
 
-# Tela de fim de jogo
 def game_over_screen(score):
     screen.fill(WHITE)
     show_text("Game Over", 64, RED, SCREEN_WIDTH // 2 - 150, SCREEN_HEIGHT // 2 - 100)
@@ -103,10 +102,9 @@ def game_over_screen(score):
                 if event.key == pygame.K_q:
                     return False
 
-# FPS
+
 clock = pygame.time.Clock()
 
-# Loop principal do jogo
 def main_game():
     game_over = False
     score = 0
@@ -122,7 +120,6 @@ def main_game():
             if event.type == pygame.QUIT:
                 game_over = True
 
-        # Controles do jogador
         keys = pygame.key.get_pressed()
         if keys[pygame.K_LEFT] and player_x - player_speed > 0:
             player_x -= player_speed
