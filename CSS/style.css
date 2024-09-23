@@ -483,8 +483,8 @@ body{
     margin-top: 15px;
     text-align: center;
     color: black;
-    font-size: 25px;
-    font-family: 'Rocher';
+    font-size: 14px;
+    font-family: "Press Start 2P", system-ui;
     animation: colorChange2 1.5s infinite alternate;
 }
 
