@@ -63,3 +63,23 @@ document.querySelector('.linkNextDark').addEventListener('click', function(e) {
 
     document.getElementById('clickAudio').play();
 });
+
+function changeContentMobile() {
+
+    var mobilepart =document.getElementById('Part1Mobile');
+    mobilepart.innerHTML = 'Qual a utilidade do Python?!';
+    var textmobile = document.getElementById('textArea1');
+    textmobile.innerHTML = `<li>Desenvolvimento web do lado do servidor...</li>
+        <li>Automação com scripts Python...</li>
+        <li>Ciência de dados e Machine Learning...</li>
+        <li>Automação de Testes de software...</li>`;
+
+    var TitlePyMobile = document.getElementById('TitlePyMobile');
+    TitlePyMobile.style.color = "white"
+    mobilepart.style.color = "white"
+    textmobile.style.color = "white"
+
+    // Muda o background para o segundo
+    document.getElementById('BKMobile').style.backgroundImage = "url(../IMG/DaycenarychomeDark.png)";
+    document.getElementById('apresentacao').style.backgroundColor = "#5c5c5c";
+}
