@@ -276,7 +276,7 @@ body{
     font-family: "Press Start 2P", system-ui;
     font-size: 12px;
     text-align: center;
-    margin-top: 20%;
+    margin-top: 10px;
     animation: colorChange 1.5s infinite alternate;
     text-transform: uppercase;
 }
@@ -348,6 +348,20 @@ body{
     color: white; 
     font-weight: bold;
     font-size: 20px;
+    margin-left: 25px;
+}
+
+.qrImg, .textQR{
+    display: flex;
+    justify-content: center;
+}
+
+.textQR{
+    margin-bottom: 10px;
+}
+
+.QR{
+    width: 300px;
 }
 
 .membros span{
@@ -483,8 +497,8 @@ body{
     margin-top: 15px;
     text-align: center;
     color: black;
-    font-size: 25px;
-    font-family: 'Rocher';
+    font-size: 15px;
+    font-family: "Press Start 2P", system-ui;
     animation: colorChange2 1.5s infinite alternate;
 }
 
