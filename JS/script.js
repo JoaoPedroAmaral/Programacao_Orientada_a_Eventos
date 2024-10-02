@@ -26,7 +26,6 @@ document.getElementById('clickButton').addEventListener('click', function() {
     // Seleciona o elemento do texto e botão
     const textElement = document.getElementById("textPOE");
     const titleElement = document.getElementById("titlePOE");
-    const nextButton = document.getElementById("btnPOE");
 
     if(apresentacao.classList == "apresentacaoDark"){
         apresentacao.classList.toggle("apresentacaoDark");
@@ -40,6 +39,30 @@ document.getElementById('clickButton').addEventListener('click', function() {
         document.getElementById("btnNextDark").style.display = 'none'
         document.querySelector('.linkNext').style.display = 'flex'
     }
+
+
+    var mobilepart =document.getElementById('Part1Mobile');
+    mobilepart.innerHTML = 'Conhecendo seu criador!';
+    var textmobile = document.getElementById('textArea1');
+    textmobile.innerHTML = `Python é uma linguagem fácil de aprender, poderosa e versátil. Ela é multiparadigma servindo para sistemas desenvolvidos em paradigmas orientados a objetos, imperativo, orientado a eventos, etc...`;
+    textmobile.style.fontWeight = 'bold'
+    textmobile.style.marginTop = '10px'
+
+    var TitlePyMobile = document.getElementById('TitlePyMobile');
+    TitlePyMobile.style.color = "black"
+    mobilepart.style.color = "black"
+    textmobile.style.color = "black"
+
+    // Muda o background para o segundo
+    document.getElementById('BKMobile').style.backgroundImage = "url(../IMG/fundoDinosauro.png)";
+    document.getElementById('apresentacao').style.backgroundColor = "#ccc";
+
+    let btn = document.getElementById("btnNextmobile")
+    let btnDK = document.querySelector(".btnNextDark")
+    btn.style.display = 'flex'
+    btnDK.style.display = 'none'
+
+
     
     titleElement.textContent = titles[currentTextIndex];
     textElement.textContent = texts[currentTextIndex];
@@ -77,7 +100,8 @@ document.querySelector('.linkNextDark').addEventListener('click', function(e) {
     document.getElementById('clickAudio').play();
 });
 
-function changeContentMobile() {
+
+document.querySelector('.linkmobile').addEventListener('click', function(e){
 
     var mobilepart =document.getElementById('Part1Mobile');
     mobilepart.innerHTML = 'Qual a utilidade do Python?!';
@@ -95,7 +119,18 @@ function changeContentMobile() {
     // Muda o background para o segundo
     document.getElementById('BKMobile').style.backgroundImage = "url(../IMG/DaycenarychomeDark.png)";
     document.getElementById('apresentacao').style.backgroundColor = "#5c5c5c";
-}
+
+    document.getElementById('clickAudio').play();
+
+    let btn = document.getElementById("btnNextmobile")
+    let btnDK = document.querySelector(".btnNextDark")
+    btn.style.display = 'none'
+    btnDK.style.display = 'flex'
+});
+
+document.querySelector('.btnNextDark').addEventListener('click', function(e){
+    document.getElementById('clickAudio').play();
+})
 
 
 
@@ -111,8 +146,8 @@ function changeContentMobile() {
 const titles = [
     "Programação Orientada a Eventos com Python:",
     "O que é quais as suas Características",
-    "Vantagens",
-    "Desvantagens",
+    "Vantagens da programação orientada a eventos",
+    "Desvantagens da programação orientada a eventos ",
     "Procurando mais? voce é um verdadeiro nerd curioso"
 ];
 
