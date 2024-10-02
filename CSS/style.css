@@ -537,14 +537,6 @@ body{
 
 /*Programação orientada a eventos*/
 
-.bkBlack h2{
-    font-family: 'Rocher';
-    font-size: 50px;
-    padding: 12px 0;
-    text-align: center;
-    color: white;
-}
-
 .bkBlack h4{
     font-size: 14px;
     font-family: "Press Start 2P", system-ui;
@@ -556,8 +548,6 @@ body{
 /*FOOTER*/
 
 .footer{
-    height: 48vh;
-    display: flex;
     background-color: rgba(0,0,0,0.9);
 }
 
@@ -569,10 +559,27 @@ body{
     background-color: rgba(0,0,0,0.9);
 }
 
+.referencesAll{
+    margin-top: 30px;
+    display: flex;
+    height: 50vh;
+    align-items: center;
+    justify-content: center;
+}
+.conclusion{
+    display: flex;
+    height: 100%;
+}
+
 .IconMario{
     display: flex;
     align-items:center;
     justify-content: center;
+}
+.IconMario p {
+    color: white;
+    text-align: center;
+    font-size: 10px;
 }
 
 .mario{
@@ -610,16 +617,59 @@ body{
 
 .titleFooter{
     text-align: center;
-    margin: 25px 0;
+    margin-bottom: 25px;
     color: white;
     font-family: "Press Start 2P", system-ui;
+    font-size: 12px;
 }
 
 .textFooter{
     color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 .dinossauroBKMobile{
     display: none;
+}
+
+.Ctitle{
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-family: "Press Start 2P", system-ui;
+    font-size: 20px;
+}
+
+.Ctext{
+    color: white;
+    text-align: justify;
+    font-weight: bold;
+    margin-right:30px;
+    font-size: 14px;
+}
+
+/*POE*/
+.textPOE1{
+    height: 60vh;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: justify;
+    color: white;
+    margin-top: 20px !important;
+    margin:0px 20px;
+    margin-bottom: 5%;
+}
+
+.textSpanPOE1{
+    font-family: 'Rocher';
+}
+
+.titlePOE1{
+    font-family: 'Rocher';
+    font-size: 30px;
+    padding: 12px 0;
+    text-align: center;
+    color: white;
 }
 
 
@@ -691,3 +741,4 @@ body{
 height: 70vh;
 }
 }
+
