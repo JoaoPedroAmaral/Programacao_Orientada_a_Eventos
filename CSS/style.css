@@ -547,16 +547,12 @@ body{
 
 /*FOOTER*/
 
-.footer{
-    background-color: rgba(0,0,0,0.9);
-}
-
 .footer2{
     height: 8vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0,0,0,0.9);
+
 }
 
 .referencesAll{
@@ -673,6 +669,9 @@ body{
     color: white;
 }
 
+.BKFOOOTER{
+    background-color:rgba(0, 0, 0, 0.9); ;
+}
 
 @media(max-width:450px){
 .textQR{
@@ -753,11 +752,81 @@ height: 70vh;
 .textPOE1{
     margin-bottom: 0;
     font-size: 12px;
-    height: 69vh;
+    height: 67vh;
     margin-top:10px !important;
 }
 .bkBlack h4{
 font-size: 10px;
+}
+
+.conclusion{
+    display: block;
+}
+
+.IconMario{
+    width: 80px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.mario{
+    width: 50px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.Ctitle{
+    font-size: 12px;
+}
+
+.Ctext{
+    margin: 0 10px;
+    font-size: 12px;
+}
+
+.referencesAll{
+    align-items: start;
+    height: 40vh;
+}
+
+.titleFooter{
+    font-size: 8px;
+}
+
+.referencesPOE{
+    width: 100%;
+}
+
+.referencesPOE li{
+    font-size: 12px;
+    margin-bottom: 1px;
+}
+
+.referencesPython li{
+    margin-left: 10px;
+     font-size: 12px;
+     margin-bottom: 1px;
+}
+.referencesPython{
+    margin:0;
+    width: 100%;
+}
+.referencesPOE{
+    margin: 0;
+    margin-left: 10px;
+}
+
+.textFooter{
+    font-size: 12px;
+    margin: 0 10px;
+}
+
+.footer2{
+    align-items: start;
+    height: 100%;
+    padding-bottom: 10px;
 }
 }
 
