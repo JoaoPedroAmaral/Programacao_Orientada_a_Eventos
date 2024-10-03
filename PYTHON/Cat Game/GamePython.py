@@ -1,52 +1,64 @@
 import pygame
 import random
 import math
-
+import os
 
 pygame.init()
 
-
+# Cores
 WHITE = (255, 255, 255)
-RED = (255, 0, 0)
 BLACK = (0, 0, 0)
-BLUE = (0, 191, 255)
-GREEN = (0, 255, 0)
-YELLOW = (255, 255, 0)
+RED = (255, 0, 0)
 
-
+# Dimensões da tela
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-pygame.display.set_caption('Pegar Círculos e Desviar de Triângulos')
+pygame.display.set_caption('Cat Game')
 
-
-player_size = 50
+# Variáveis do jogador
+player_size = 75
 player_x = SCREEN_WIDTH // 2
 player_y = SCREEN_HEIGHT - player_size
-player_speed = 10
+player_speed = 21
 
-
+# Configurações de círculos e triângulos
 circle_radius = 30
-triangle_size = 40
+triangle_size = 80  # Definimos o tamanho padrão para 80x80
 circle_speed = 5
 triangle_speed = 5
 circle_list = []
 triangle_list = []
 
+# Carregar e redimensionar imagens
+img_circle = pygame.transform.scale(pygame.image.load(os.path.join(os.path.dirname(__file__), 'IMG/fish.png')).convert_alpha(), (80, 80))
+img_triangle_B = pygame.transform.scale(pygame.image.load(os.path.join(os.path.dirname(__file__),"IMG/ball.png")).convert_alpha(), (80, 80))
+img_triangle_C = pygame.transform.scale(pygame.image.load(os.path.join(os.path.dirname(__file__),"IMG/knife.png")).convert_alpha(), (80, 80))
+img_triangle_D = pygame.transform.scale(pygame.image.load(os.path.join(os.path.dirname(__file__),"IMG/pc.png")).convert_alpha(), (80, 80))
+img_player_idle = pygame.transform.scale(pygame.image.load(os.path.join(os.path.dirname(__file__),"IMG/catStop.png")).convert_alpha(), (80, 80))
+img_player_move = pygame.transform.scale(pygame.image.load(os.path.join(os.path.dirname(__file__),"IMG/catWalk.png")).convert_alpha(), (80, 80))
+background_img = pygame.transform.scale(pygame.image.load(os.path.join(os.path.dirname(__file__),"IMG/fundo.png")).convert(), (SCREEN_WIDTH, SCREEN_HEIGHT))
+
+# Carregar som
+pygame.mixer.music.load(os.path.join(os.path.dirname(__file__),"SOUND/catGameMusic.mp3"))
+pygame.mixer.music.play(-1)  # Toca em loop
+
+# Funções de criação
 def create_circle():
     x_pos = random.randint(circle_radius, SCREEN_WIDTH - circle_radius)
-    circle_list.append([x_pos, 0])
+    circle_list.append([x_pos, 0])  # Círculo começa do topo da tela (y=0)
 
 def create_triangle():
-    x_pos = random.randint(triangle_size, SCREEN_WIDTH - triangle_size)
-    triangle_list.append([x_pos, 0])
+    x_pos = random.randint(0, SCREEN_WIDTH - triangle_size)
+    triangle_img = random.choice([img_triangle_B, img_triangle_C, img_triangle_D])
+    triangle_list.append([x_pos, 0, triangle_img])  # Triângulo começa do topo (y=0)
 
-
+# Função para mover objetos
 def move_objects(objects, speed):
     for obj in objects:
         obj[1] += speed
 
-
+# Função para colisões
 def check_collision_circle(player_x, player_y, circle_list):
     for circle in circle_list:
         circle_x, circle_y = circle
@@ -56,33 +68,33 @@ def check_collision_circle(player_x, player_y, circle_list):
             return True
     return False
 
-
 def check_collision_triangle(player_x, player_y, triangle_list):
     for triangle in triangle_list:
-        triangle_x, triangle_y = triangle
+        triangle_x, triangle_y = triangle[:2]
         distance = math.sqrt((triangle_x - (player_x + player_size // 2))**2 + (triangle_y - (player_y + player_size // 2))**2)
-        if distance < triangle_size:
+        if distance < triangle_size // 2:
             return True
     return False
 
+# Função para desenhar triângulos (agora com imagens)
+def draw_triangle(x, y, image):
+    # Desenhar a imagem do triângulo
+    screen.blit(image, (x, y))
 
-def draw_triangle(x, y):
-    points = [(x, y), (x - triangle_size, y + triangle_size), (x + triangle_size, y + triangle_size)]
-    pygame.draw.polygon(screen, RED, points)
+# Função para desenhar o jogador
+def draw_player(x, y, moving):
+    if moving:
+        screen.blit(img_player_move, (x, y))
+    else:
+        screen.blit(img_player_idle, (x, y))
 
+# Mostrar texto na tela
 def show_text(text, font_size, color, x, y):
     font = pygame.font.Font(None, font_size)
     rendered_text = font.render(text, True, color)
     screen.blit(rendered_text, (x, y))
 
-def draw_gradient():
-    for i in range(SCREEN_HEIGHT):
-       
-        r = int(0 + (255 * i / SCREEN_HEIGHT))  
-        g = int(191 + (64 * i / SCREEN_HEIGHT)) 
-        b = 255  # Azul fixo
-        pygame.draw.line(screen, (r, g, b), (0, i), (SCREEN_WIDTH, i))
-
+# Função para exibir tela de fim de jogo
 def game_over_screen(score):
     screen.fill(WHITE)
     show_text("Game Over", 64, RED, SCREEN_WIDTH // 2 - 150, SCREEN_HEIGHT // 2 - 100)
@@ -102,9 +114,10 @@ def game_over_screen(score):
                 if event.key == pygame.K_q:
                     return False
 
-
+# Relógio do jogo
 clock = pygame.time.Clock()
 
+# Função principal do jogo
 def main_game():
     game_over = False
     score = 0
@@ -114,6 +127,7 @@ def main_game():
     triangle_list.clear()
     circle_speed = 5
     triangle_speed = 5
+    moving = False
 
     while not game_over:
         for event in pygame.event.get():
@@ -121,12 +135,15 @@ def main_game():
                 game_over = True
 
         keys = pygame.key.get_pressed()
+        moving = False
         if keys[pygame.K_LEFT] and player_x - player_speed > 0:
             player_x -= player_speed
+            moving = True
         if keys[pygame.K_RIGHT] and player_x + player_speed < SCREEN_WIDTH - player_size:
             player_x += player_speed
+            moving = True
 
-       
+        # Criar círculos e triângulos
         if random.randint(1, 20) == 1:
             create_circle()
         if random.randint(1, 25) == 1:
@@ -135,34 +152,42 @@ def main_game():
         move_objects(circle_list, circle_speed)
         move_objects(triangle_list, triangle_speed)
 
-  
+        # Verificar colisões
         if check_collision_circle(player_x, player_y, circle_list):
             score += 1
         if check_collision_triangle(player_x, player_y, triangle_list):
             game_over = True
 
+        # Aumentar a dificuldade
         if score % 10 == 0 and score > 0:
             circle_speed += 0.5
             triangle_speed += 0.5
 
-        draw_gradient()
+        # Desenhar fundo
+        screen.blit(background_img, (0, 0))
 
+        # Desenhar uma camada preta semi-transparente
+        dark_layer = pygame.Surface((SCREEN_WIDTH, SCREEN_HEIGHT))
+        dark_layer.set_alpha(128)  # Transparência de 50%
+        dark_layer.fill(BLACK)
+        screen.blit(dark_layer, (0, 0))
 
-        pygame.draw.rect(screen, BLACK, (player_x, player_y, player_size, player_size))
+        # Desenhar jogador
+        draw_player(player_x, player_y, moving)
 
-
+        # Desenhar círculos
         for circle in circle_list:
-            pygame.draw.circle(screen, GREEN, (circle[0], circle[1]), circle_radius)
+            screen.blit(img_circle, (circle[0] - circle_radius, circle[1] - circle_radius))
 
-
+        # Desenhar triângulos
         for triangle in triangle_list:
-            draw_triangle(triangle[0], triangle[1])
+            draw_triangle(triangle[0], triangle[1], triangle[2])
 
-
+        # Remover objetos que saíram da tela
         circle_list[:] = [circle for circle in circle_list if circle[1] < SCREEN_HEIGHT]
         triangle_list[:] = [triangle for triangle in triangle_list if triangle[1] < SCREEN_HEIGHT]
 
-
+        # Mostrar a pontuação
         show_text(f'Score: {score}', 36, BLACK, 10, 10)
 
         pygame.display.flip()
@@ -170,7 +195,7 @@ def main_game():
 
     return score
 
-
+# Loop do jogo
 while True:
     score = main_game()
     if not game_over_screen(score):
