@@ -362,6 +362,8 @@ body{
 
 .QR{
     width: 300px;
+    border-radius: 50px;
+    border: solid 8px #0e7851;
 }
 
 .membros span{
@@ -535,14 +537,6 @@ body{
 
 /*Programação orientada a eventos*/
 
-.bkBlack h2{
-    font-family: 'Rocher';
-    font-size: 50px;
-    padding: 12px 0;
-    text-align: center;
-    color: white;
-}
-
 .bkBlack h4{
     font-size: 14px;
     font-family: "Press Start 2P", system-ui;
@@ -553,24 +547,35 @@ body{
 
 /*FOOTER*/
 
-.footer{
-    height: 48vh;
-    display: flex;
-    background-color: rgba(0,0,0,0.9);
-}
-
 .footer2{
     height: 8vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0,0,0,0.9);
+
+}
+
+.referencesAll{
+    margin-top: 30px;
+    display: flex;
+    height: 50vh;
+    align-items: center;
+    justify-content: center;
+}
+.conclusion{
+    display: flex;
+    height: 100%;
 }
 
 .IconMario{
     display: flex;
     align-items:center;
     justify-content: center;
+}
+.IconMario p {
+    color: white;
+    text-align: center;
+    font-size: 10px;
 }
 
 .mario{
@@ -608,11 +613,220 @@ body{
 
 .titleFooter{
     text-align: center;
-    margin: 25px 0;
+    margin-bottom: 25px;
     color: white;
     font-family: "Press Start 2P", system-ui;
+    font-size: 12px;
 }
 
 .textFooter{
     color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
+.dinossauroBKMobile{
+    display: none;
+}
+
+.Ctitle{
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-family: "Press Start 2P", system-ui;
+    font-size: 20px;
+}
+
+.Ctext{
+    color: white;
+    text-align: justify;
+    font-weight: bold;
+    margin-right:30px;
+    font-size: 14px;
+}
+
+/*POE*/
+.textPOE1{
+    height: 60vh;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: justify;
+    color: white;
+    margin-top: 20px !important;
+    margin:0px 20px;
+    margin-bottom: 5%;
+}
+
+.textSpanPOE1{
+    font-family: 'Rocher';
+}
+
+.titlePOE1{
+    height: 16vh;
+    font-family: 'Rocher';
+    font-size: 30px;
+    padding: 12px 0;
+    text-align: center;
+    color: white;
+}
+
+.BKFOOOTER{
+    background-color:rgba(0, 0, 0, 0.9); ;
+}
+
+@media(max-width:450px){
+.textQR{
+    display: none;
+}
+.qrImg{
+    display: none;
+}
+
+.conjunto{
+    display: block;
+}
+.titlePage, .membrosArea{
+    width: 100%;
+}
+.context h1{
+        font-size: 20px;
+}
+.context h4{
+    font-size: 10px;
+}
+.membros{
+    font-size: 16px;
+}
+.membros span{
+    font-size: 12px;
+}
+
+.dinossauroBK{
+    display: none;
+}
+.dinossauroBKMobile{
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position-y:bottom;
+    background-image: url(../IMG/fundoDinosauro.png);
+    display: block;
+}
+.dinossauroBK {
+    background-size: cover;
+}
+
+.titleOE {
+    font-size: 1.3em;
+}
+
+.Part1{
+    margin-left: 5%;
+}
+
+.textArea {
+    margin-left: 5%;
+    font-size: 0.9em;
+}
+
+.textArea p, .textArea li{
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.linkNext {
+    font-size: 1em;
+    padding: 8px 16px;
+    margin: 0;
+}
+.OrientadoAEvento{
+height: 70vh;
+}
+
+.btnNextDark{
+    display: none;
+}
+
+.titlePOE1{
+    font-size: 25px;
+}
+.textPOE1{
+    margin-bottom: 0;
+    font-size: 12px;
+    height: 67vh;
+    margin-top:10px !important;
+}
+.bkBlack h4{
+font-size: 10px;
+}
+
+.conclusion{
+    display: block;
+}
+
+.IconMario{
+    width: 80px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.mario{
+    width: 50px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.Ctitle{
+    font-size: 12px;
+}
+
+.Ctext{
+    margin: 0 10px;
+    font-size: 12px;
+}
+
+.referencesAll{
+    align-items: start;
+    height: 40vh;
+}
+
+.titleFooter{
+    font-size: 8px;
+}
+
+.referencesPOE{
+    width: 100%;
+}
+
+.referencesPOE li{
+    font-size: 12px;
+    margin-bottom: 1px;
+}
+
+.referencesPython li{
+    margin-left: 10px;
+     font-size: 12px;
+     margin-bottom: 1px;
+}
+.referencesPython{
+    margin:0;
+    width: 100%;
+}
+.referencesPOE{
+    margin: 0;
+    margin-left: 10px;
+}
+
+.textFooter{
+    font-size: 12px;
+    margin: 0 10px;
+}
+
+.footer2{
+    align-items: start;
+    height: 100%;
+    padding-bottom: 10px;
+}
+}
+
