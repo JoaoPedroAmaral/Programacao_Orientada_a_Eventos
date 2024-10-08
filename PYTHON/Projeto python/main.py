@@ -5,10 +5,11 @@ from openpyxl import Workbook
 from openpyxl.styles import PatternFill
 from collections import Counter
 from tkinter import filedialog, messagebox
+import os
 
 largura_tela = 700
 altura_tela = 640
-imagem_icon_1 = Image.open("icon_1.png")
+imagem_icon_1 = Image.open(os.path.join(os.path.dirname(__file__), "icon_1.png"))
 
 
 ##--- Paleta de cores ---# 
