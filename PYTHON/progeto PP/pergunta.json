@@ -1,0 +1,69 @@
+[
+    {
+      "enunciado": "Qual é o maior planeta do Sistema Solar?",
+      "alternativas": [
+        "Marte",
+        "Terra",
+        "Vênus",
+        "Júpiter",
+        "Saturno"
+      ],
+      "correta": "Júpiter"
+    },
+    {
+      "enunciado": "Qual é o elemento químico representado pela sigla 'O'?",
+      "alternativas": [
+        "Oxigênio",
+        "Ouro",
+        "Ozônio",
+        "Ósmio",
+        "Óxido"
+      ],
+      "correta": "Oxigênio"
+    },
+    {
+      "enunciado": "Quem pintou a Mona Lisa?",
+      "alternativas": [
+        "Vincent van Gogh",
+        "Claude Monet",
+        "Pablo Picasso",
+        "Leonardo da Vinci",
+        "Michelangelo"
+      ],
+      "correta": "Leonardo da Vinci"
+    },
+    {
+      "enunciado": "Qual país sediou os Jogos Olímpicos de 2016?",
+      "alternativas": [
+        "Brasil",
+        "Japão",
+        "França",
+        "Estados Unidos",
+        "China"
+      ],
+      "correta": "Brasil"
+    },
+    {
+      "enunciado": "Qual é a capital da Austrália?",
+      "alternativas": [
+        "Sydney",
+        "Melbourne",
+        "Canberra",
+        "Brisbane",
+        "Perth"
+      ],
+      "correta": "Canberra"
+    },
+    {
+      "enunciado": "Qual é a capital da Austrália?",
+      "alternativas": [
+        "Sydney",
+        "Melbourne",
+        "Canberra",
+        "Brisbane",
+        "Perth"
+      ],
+      "correta": "Canberra"
+    }
+  ]
+  
