@@ -14,7 +14,7 @@ RED = (255, 0, 0)
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-pygame.display.set_caption('Cat Fish')
+pygame.display.set_caption('Fish Ball Cat')
 
 # Variáveis do jogador
 player_size = 75
@@ -158,7 +158,7 @@ def main_menu():
         screen.blit(dark_layer, (0, 0))
 
         # Mostrar título animado
-        animate_title("CAT FISH", 100, SCREEN_WIDTH // 2, SCREEN_HEIGHT // 4)
+        animate_title("FISH BALL CAT", 100, SCREEN_WIDTH // 2, SCREEN_HEIGHT // 4)
 
         # Mostrar instrução para começar
         show_text("Press ENTER to Start", 48, WHITE, SCREEN_WIDTH // 2 - 180, SCREEN_HEIGHT // 2 + 100)
@@ -204,7 +204,7 @@ def main_menu():
     menu_running = True
 
     # Realizar a animação do título antes de exibir o texto "Press ENTER to Start"
-    animate_title(["CAT", "FISH"], 100, SCREEN_WIDTH // 2, SCREEN_HEIGHT // 4)
+    animate_title(["FISH", "BALL", "CAT"], 100, SCREEN_WIDTH // 2, SCREEN_HEIGHT // 4)
 
     while menu_running:
         screen.blit(background_img, (0, 0))
@@ -216,8 +216,9 @@ def main_menu():
         screen.blit(dark_layer, (0, 0))
 
         # Exibir o título e o texto "Press ENTER to Start" estático após a animação
-        show_text("CAT", 100, WHITE, SCREEN_WIDTH // 2 - 68, SCREEN_HEIGHT // 4)
-        show_text("FISH", 100, WHITE, SCREEN_WIDTH // 2 - 80, SCREEN_HEIGHT // 4 + 80)
+        show_text("FISH", 100, WHITE, SCREEN_WIDTH // 2 - 80, SCREEN_HEIGHT // 4)
+        show_text("BALL", 100, WHITE, SCREEN_WIDTH // 2 - 90, SCREEN_HEIGHT // 4 + 80)
+        show_text("CAT", 100, WHITE, SCREEN_WIDTH // 2 - 68, SCREEN_HEIGHT // 4 + 160)
 
         # Mostrar instrução para começar
         show_text("Press ENTER to Start", 48, WHITE, SCREEN_WIDTH // 2 - 180, SCREEN_HEIGHT // 2 + 100)
