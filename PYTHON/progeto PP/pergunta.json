@@ -1,69 +1,168 @@
 [
     {
-      "enunciado": "Qual é o maior planeta do Sistema Solar?",
+      "enunciado": "O que caracteriza a programação orientada a eventos?",
       "alternativas": [
-        "Marte",
-        "Terra",
-        "Vênus",
-        "Júpiter",
-        "Saturno"
+        "O fluxo de execução é determinado por uma sequência predefinida de operações.",
+        "O fluxo de execução é guiado por eventos externos.",
+        "O fluxo de execução depende exclusivamente do programador.",
+        "A execução dos eventos segue uma ordem cronológica fixa.",
+        "Os eventos são sempre síncronos."
       ],
-      "correta": "Júpiter"
+      "correta": "O fluxo de execução é guiado por eventos externos."
     },
     {
-      "enunciado": "Qual é o elemento químico representado pela sigla 'O'?",
+      "enunciado": "Qual biblioteca Python padrão é utilizada para a criação de interfaces gráficas?",
       "alternativas": [
-        "Oxigênio",
-        "Ouro",
-        "Ozônio",
-        "Ósmio",
-        "Óxido"
+        "Pandas",
+        "Pillow",
+        "Tkinter",
+        "Flask",
+        "PySpark"
       ],
-      "correta": "Oxigênio"
+      "correta": "Tkinter"
     },
     {
-      "enunciado": "Quem pintou a Mona Lisa?",
+      "enunciado": "O que é um loop de eventos na programação orientada a eventos?",
       "alternativas": [
-        "Vincent van Gogh",
-        "Claude Monet",
-        "Pablo Picasso",
-        "Leonardo da Vinci",
-        "Michelangelo"
+        "Um ciclo infinito que realiza operações predefinidas.",
+        "Um mecanismo que executa funções de resposta de acordo com eventos recebidos.",
+        "Uma função que roda apenas uma vez durante a execução do programa.",
+        "Uma sequência de operações fixas e sincronizadas.",
+        "Um processo que gera eventos automaticamente."
       ],
-      "correta": "Leonardo da Vinci"
+      "correta": "Um mecanismo que executa funções de resposta de acordo com eventos recebidos."
     },
     {
-      "enunciado": "Qual país sediou os Jogos Olímpicos de 2016?",
+      "enunciado": "Qual das seguintes opções é um exemplo de evento em uma GUI?",
       "alternativas": [
-        "Brasil",
-        "Japão",
-        "França",
-        "Estados Unidos",
-        "China"
+        "Carregamento de uma imagem",
+        "Interação do usuário com um botão",
+        "Execução de uma função matemática",
+        "Abertura de um arquivo de texto",
+        "Execução de um script Python"
       ],
-      "correta": "Brasil"
+      "correta": "Interação do usuário com um botão"
     },
     {
-      "enunciado": "Qual é a capital da Austrália?",
+      "enunciado": "Na programação orientada a eventos, como é chamada a função que reage a um evento?",
       "alternativas": [
-        "Sydney",
-        "Melbourne",
-        "Canberra",
-        "Brisbane",
-        "Perth"
+        "Executor de evento",
+        "Handler de evento",
+        "Função de controle",
+        "Loop de evento",
+        "Responedor de evento"
       ],
-      "correta": "Canberra"
+      "correta": "Handler de evento"
     },
     {
-      "enunciado": "Qual é a capital da Austrália?",
+      "enunciado": "O que torna a programação orientada a eventos adequada para interfaces gráficas?",
       "alternativas": [
-        "Sydney",
-        "Melbourne",
-        "Canberra",
-        "Brisbane",
-        "Perth"
+        "Ela permite a execução de múltiplos eventos simultâneos.",
+        "Ela garante que todas as ações sejam executadas em uma ordem específica.",
+        "Ela permite que o usuário controle as ações sem uma sequência predefinida.",
+        "Ela força o programa a executar operações de forma sequencial.",
+        "Ela utiliza um loop de eventos contínuo que não depende da interação do usuário."
       ],
-      "correta": "Canberra"
+      "correta": "Ela permite que o usuário controle as ações sem uma sequência predefinida."
+    },
+    {
+      "enunciado": "Qual a vantagem do processamento assíncrono na programação orientada a eventos?",
+      "alternativas": [
+        "A execução dos eventos ocorre em ordem cronológica.",
+        "Os eventos são disparados e tratados de forma independente.",
+        "Os eventos só podem ocorrer após a conclusão do anterior.",
+        "A sincronização é sempre necessária entre os eventos.",
+        "A execução do programa é pausada enquanto os eventos ocorrem."
+      ],
+      "correta": "Os eventos são disparados e tratados de forma independente."
+    },
+    {
+      "enunciado": "Qual dos exemplos a seguir é uma aplicação comum da programação orientada a eventos?",
+      "alternativas": [
+        "Execução de funções matemáticas complexas",
+        "Interações em interfaces gráficas de usuário (GUI)",
+        "Leitura de grandes volumes de dados",
+        "Operações de banco de dados em lote",
+        "Execução de algoritmos de ordenação"
+      ],
+      "correta": "Interações em interfaces gráficas de usuário (GUI)"
+    },
+    {
+      "enunciado": "Em que tipo de aplicação a programação orientada a eventos pode ser particularmente útil?",
+      "alternativas": [
+        "Programas com tarefas em sequência fixa",
+        "Sistemas reativos e de interfaces de usuário",
+        "Aplicações que não necessitam de interação do usuário",
+        "Execuções de scripts automáticos e predefinidos",
+        "Algoritmos de inteligência artificial"
+      ],
+      "correta": "Sistemas reativos e de interfaces de usuário"
+    },
+    {
+      "enunciado": "O que é um evento no contexto da programação orientada a eventos?",
+      "alternativas": [
+        "Uma operação interna do sistema que ocorre automaticamente.",
+        "Uma interação externa que dispara uma resposta no programa.",
+        "Um procedimento pré-determinado que ocorre em momentos específicos.",
+        "Um ciclo de processamento repetido.",
+        "Uma função interna do código chamada manualmente pelo programador."
+      ],
+      "correta": "Uma interação externa que dispara uma resposta no programa."
+    },
+    {
+      "enunciado": "Qual das alternativas a seguir é uma vantagem da modularidade na programação orientada a eventos?",
+      "alternativas": [
+        "Aumenta a complexidade do código.",
+        "Facilita a manutenção e o reuso de código.",
+        "Exige mais sincronização entre os eventos.",
+        "Torna o código menos flexível.",
+        "Impede que eventos sejam tratados de forma independente."
+      ],
+      "correta": "Facilita a manutenção e o reuso de código."
+    },
+    {
+      "enunciado": "Qual biblioteca é usada para o desenvolvimento de jogos em Python?",
+      "alternativas": [
+        "PyTest",
+        "Twisted",
+        "Pandas",
+        "Flask",
+        "Pygame"
+      ],
+      "correta": "Pygame"
+    },
+    {
+      "enunciado": "O que permite a flexibilidade na programação orientada a eventos?",
+      "alternativas": [
+        "Execução de operações em sequência fixa.",
+        "A capacidade de responder dinamicamente a eventos.",
+        "A necessidade de sincronizar todos os eventos.",
+        "A execução de eventos em uma ordem cronológica.",
+        "A execução de eventos apenas após a conclusão de outros eventos."
+      ],
+      "correta": "A capacidade de responder dinamicamente a eventos."
+    },
+    {
+      "enunciado": "Quais das seguintes aplicações utilizam programação orientada a eventos?",
+      "alternativas": [
+        "Aplicações web e jogos",
+        "Compiladores e interpretadores",
+        "Banco de dados relacionais",
+        "Sistemas de controle de versão",
+        "Motores de busca"
+      ],
+      "correta": "Aplicações web e jogos"
+    },
+    {
+      "enunciado": "Como eventos assíncronos ajudam a otimizar o uso de recursos do sistema?",
+      "alternativas": [
+        "Executando eventos de forma sincronizada.",
+        "Permitem que o handler de evento seja executado simultaneamente e independentemente.",
+        "Forçando o sistema a processar eventos um por vez.",
+        "Reduzindo o número de eventos que podem ocorrer simultaneamente.",
+        "Limitando a modularidade do sistema."
+      ],
+      "correta": "Permitem que o handler de evento seja executado simultaneamente e independentemente."
     }
   ]
   
